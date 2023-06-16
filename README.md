@@ -27,15 +27,15 @@ yum install java -y
 - Install Spark 3.0
 
 ```console
-wget https://dlcdn.apache.org/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz
-tar -xvf spark-3.3.0-bin-hadoop3.tgz 
-rm -rf spark-3.3.0-bin-hadoop3.tgz 
-mv spark-3.3.0-bin-hadoop3/ spark-3.3.0
+wget https://dlcdn.apache.org/spark/spark-3.4.0/spark-3.4.0-bin-hadoop3.tgz
+tar -xvf spark-3.4.0-bin-hadoop3.tgz
+rm -rf spark-3.4.0-bin-hadoop3.tgz
+mv spark-3.4.0-bin-hadoop3/ spark-3.4.0
 ```
 
 - Set Environment variables
 ```console
-echo "export SPARK_HOME=/root/spark-3.3.0" > .bashrc
+echo "export SPARK_HOME=/root/spark-3.4.0" > .bashrc
 echo "export PATH=$PATH:$SPARK_HOME/bin" > .bashrc
 . .bashrc
 ```
@@ -64,7 +64,7 @@ findspark adds pyspark to sys.path at runtime
 pip3 install findspark
 ```
 
-- Exposer you app to the outside world 
+- Expose your app to the outside world 
 ```console
 sudo sed -i "s/localhost/$(curl http://checkip.amazonaws.com)/g" /root/spark-movies/static/index.js
 ```
